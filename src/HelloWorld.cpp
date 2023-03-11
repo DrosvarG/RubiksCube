@@ -1,6 +1,7 @@
-﻿#include <iostream>
+﻿#include "HelloWorld.h"
 
-int main()
+std::string helloworld::GetHelloMessage()
 {
-    std::cout << "Hello CMake.\n";
+    return "Hello CMake.";
 }
+
