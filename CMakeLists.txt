@@ -10,12 +10,7 @@ else()
 endif()
 
 find_package(Catch2 CONFIG REQUIRED)
+find_package(SDL2 CONFIG REQUIRED)
 
-add_library (hello STATIC "src/HelloWorld.cpp")
-target_include_directories (hello PUBLIC "src")
-
-add_executable (HelloWorld "src/main.cpp")
-target_link_libraries (HelloWorld PRIVATE hello)
-
-add_executable (runtests "tests/HelloWorld.cpp")
-target_link_libraries (runtests PRIVATE Catch2::Catch2WithMain hello)
+add_executable (RubiksCube "src/main.cpp")
+target_link_libraries (RubiksCube PRIVATE SDL2::SDL2)
